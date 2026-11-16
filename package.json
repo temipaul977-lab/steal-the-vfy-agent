@@ -1,0 +1,16 @@
+{
+  "name": "steal-the-vfy-agent",
+  "version": "1.0.0",
+  "description": "Signed, proof-generating Steal the VFY agent",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc", "start": "node dist/src/main.js", "dev": "npm run build && npm start", "commit": "npm run build && node dist/src/commit.js", "test": "npm run build && node --test --test-concurrency=1 dist/test/*.test.js", "check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": { "fastify": "^5.6.2", "@fastify/rate-limit": "^10.3.0", "@noble/hashes": "^1.8.0", "snarkjs": "^0.7.5", "zod": "^4.1.0", "dotenv": "^17.2.0", "circomlibjs": "^0.1.7" },
+  "devDependencies": { "typescript": "^5.9.0", "@types/node": "^24.0.0", "@types/snarkjs": "^0.7.9" }
+}
